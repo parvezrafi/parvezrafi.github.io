@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <title>Go is for lovers &middot; A Learner&#39;s World</title>
+    <title>Using TensorFlow &middot; A Learner&#39;s World</title>
     <meta name="generator" content="Hugo 0.16-DEV" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -10,7 +10,7 @@
       <meta name="description" content="">
     
     
-    <link rel="canonical" href="https://parvezrafi.github.io/2015/09/17/go-is-for-lovers"/>
+    <link rel="canonical" href="https://parvezrafi.github.io/2016/12/10/using-tensorflow"/>
     <link rel="icon" href="https://parvezrafi.github.io/favicon.ico">
     <link rel="apple-touch-icon" href="https://parvezrafi.github.io/apple-touch-icon.png"/>
     <link rel="stylesheet" href="https://parvezrafi.github.io/css/style.css">
@@ -20,13 +20,13 @@
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="Go is for lovers" />
-<meta property="og:description" content="Hugo uses the excellent go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in go templates. This document is a brief primer on using go templates." />
+    <meta property="og:title" content="Using TensorFlow" />
+<meta property="og:description" content="This document is a brief primer on using go templates. The go docs provide more details. Introduction to Tensor Flow Go templates provide an extremely simple template language. It adheres to the belief that only the most basic of logic belongs in the template or view layer. One consequence of this simplicity is that go templates parse very quickly. A unique characteristic of go templates is they are content aware. Variables and content will be sanitized depending on the context of where they are used." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://parvezrafi.github.io/2015/09/17/go-is-for-lovers" />
+<meta property="og:url" content="https://parvezrafi.github.io/2016/12/10/using-tensorflow" />
 
 
-<meta property="og:updated_time" content="2015-09-17T13:47:08&#43;02:00"/>
+<meta property="og:updated_time" content="2016-12-10T01:33:08&#43;02:00"/>
 
 
 
@@ -39,12 +39,12 @@
 
     
     
-<meta itemprop="name" content="Go is for lovers">
-<meta itemprop="description" content="Hugo uses the excellent go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in go templates. This document is a brief primer on using go templates.">
+<meta itemprop="name" content="Using TensorFlow">
+<meta itemprop="description" content="This document is a brief primer on using go templates. The go docs provide more details. Introduction to Tensor Flow Go templates provide an extremely simple template language. It adheres to the belief that only the most basic of logic belongs in the template or view layer. One consequence of this simplicity is that go templates parse very quickly. A unique characteristic of go templates is they are content aware. Variables and content will be sanitized depending on the context of where they are used.">
 
 
-<meta itemprop="dateModified" content="2015-09-17T13:47:08&#43;02:00" />
-<meta itemprop="wordCount" content="1490">
+<meta itemprop="dateModified" content="2016-12-10T01:33:08&#43;02:00" />
+<meta itemprop="wordCount" content="1422">
 
 
 
@@ -56,8 +56,8 @@
 
 
 
-<meta name="twitter:title" content="Go is for lovers"/>
-<meta name="twitter:description" content="Hugo uses the excellent go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in go templates. This document is a brief primer on using go templates."/>
+<meta name="twitter:title" content="Using TensorFlow"/>
+<meta name="twitter:description" content="This document is a brief primer on using go templates. The go docs provide more details. Introduction to Tensor Flow Go templates provide an extremely simple template language. It adheres to the belief that only the most basic of logic belongs in the template or view layer. One consequence of this simplicity is that go templates parse very quickly. A unique characteristic of go templates is they are content aware. Variables and content will be sanitized depending on the context of where they are used."/>
 <meta name="twitter:site" content="@parvez_rafi"/>
 
 
@@ -259,21 +259,21 @@
     <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
         <div class="article-inner">
             
-                <img src="https://parvezrafi.github.io/banners/placeholder.png" class="article-banner">
+                <img src="https://parvezrafi.github.io/banners/tf.jpg" class="article-banner">
             
 
             <header class="article-header">
-    <a href="https://parvezrafi.github.io/2015/09/17/go-is-for-lovers">
+    <a href="https://parvezrafi.github.io/2016/12/10/using-tensorflow">
     <h1 class="article-title" itemprop="name">
-        Go is for lovers
+        Using TensorFlow
     </h1>
     </a>
     <div class="article-meta">
         <div class="article-date">
             <i class="fa fa-calendar"></i>
-            <time datetime="2015-09-17 13:47:08 &#43;0200 &#43;0200" itemprop="datePublished">17/09/2015</time>
+            <time datetime="2016-12-10 01:33:08 &#43;0200 &#43;0200" itemprop="datePublished">10/12/2016</time>
             &middot;
-            1490
+            1422
             words
 
         </div>
@@ -286,7 +286,7 @@
                 <i class="fa fa-folder"></i>
                 
                 
-                <a class="article-category-link" href="categories/programming">programming</a>
+                <a class="article-category-link" href="categories/machine-learning">machine learning</a>
                 
                 
             </div>
@@ -300,7 +300,7 @@
                 <i class="fa fa-tags"></i>
                 
                 
-                <a class="article-category-link" href="tags/go">go</a>
+                <a class="article-category-link" href="tags/deep-learning">deep learning</a>
                 
                 
             </div>
@@ -312,17 +312,10 @@
             <div class="article-entry" itemprop="articleBody">
                 
 
-<p>Hugo uses the excellent <a href="http://golang.org/&gt;">go</a> <a href="http://golang.org/pkg/html/template/&gt;">html/template</a> library for
-its template engine. It is an extremely lightweight engine that provides a very
-small amount of logic. In our experience that it is just the right amount of
-logic to be able to create a good static website. If you have used other
-template systems from different languages or frameworks you will find a lot of
-similarities in go templates.</p>
-
 <p>This document is a brief primer on using go templates. The <a href="http://golang.org/pkg/html/template/&gt;">go docs</a>
 provide more details.</p>
 
-<h2 id="introduction-to-go-templates:08cfabf6312c9fe10477f4bc9e27bdd5">Introduction to Go Templates</h2>
+<h2 id="introduction-to-tensor-flow:8cfcc91753003e1034d5997d04a3529e">Introduction to Tensor Flow</h2>
 
 <p>Go templates provide an extremely simple template language. It adheres to the
 belief that only the most basic of logic belongs in the template or view layer.
@@ -332,7 +325,7 @@ One consequence of this simplicity is that go templates parse very quickly.</p>
 content will be sanitized depending on the context of where they are used. More
 details can be found in the <a href="http://golang.org/pkg/html/template/&gt;">go docs</a>.</p>
 
-<h2 id="basic-syntax:08cfabf6312c9fe10477f4bc9e27bdd5">Basic Syntax</h2>
+<h2 id="basic-syntax:8cfcc91753003e1034d5997d04a3529e">Basic Syntax</h2>
 
 <p>Go lang templates are html files with the addition of variables and
 functions.</p>
@@ -363,7 +356,7 @@ functions.</p>
 <pre><code>{{ if or (isset .Params &quot;alt&quot;) (isset .Params &quot;caption&quot;) }} Caption {{ end }}
 </code></pre>
 
-<h2 id="variables:08cfabf6312c9fe10477f4bc9e27bdd5">Variables</h2>
+<h2 id="variables:8cfcc91753003e1034d5997d04a3529e">Variables</h2>
 
 <p>Each go template has a struct (object) made available to it. In hugo each
 template is passed either a page or a node struct depending on which type of
@@ -381,7 +374,7 @@ page you are rendering. More details are available on the
 {{ $address }}
 </code></pre>
 
-<h2 id="functions:08cfabf6312c9fe10477f4bc9e27bdd5">Functions</h2>
+<h2 id="functions:8cfcc91753003e1034d5997d04a3529e">Functions</h2>
 
 <p>Go template ship with a few functions which provide basic functionality. The go
 template system also provides a mechanism for applications to extend the
@@ -396,7 +389,7 @@ functions cannot be added without recompiling hugo.</p>
 <pre><code>{{ add 1 2 }}
 </code></pre>
 
-<h2 id="includes:08cfabf6312c9fe10477f4bc9e27bdd5">Includes</h2>
+<h2 id="includes:8cfcc91753003e1034d5997d04a3529e">Includes</h2>
 
 <p>When including another template you will pass to it the data it will be
 able to access. To pass along the current context please remember to
@@ -408,11 +401,11 @@ the /layout/ directory within Hugo.</p>
 <pre><code>{{ template &quot;chrome/header.html&quot; . }}
 </code></pre>
 
-<h2 id="logic:08cfabf6312c9fe10477f4bc9e27bdd5">Logic</h2>
+<h2 id="logic:8cfcc91753003e1034d5997d04a3529e">Logic</h2>
 
 <p>Go templates provide the most basic iteration and conditional logic.</p>
 
-<h3 id="iteration:08cfabf6312c9fe10477f4bc9e27bdd5">Iteration</h3>
+<h3 id="iteration:8cfcc91753003e1034d5997d04a3529e">Iteration</h3>
 
 <p>Just like in go, the go templates make heavy use of range to iterate over
 a map, array or slice. The following are different examples of how to use
@@ -440,7 +433,7 @@ range.</p>
 {{ end }}
 </code></pre>
 
-<h3 id="conditionals:08cfabf6312c9fe10477f4bc9e27bdd5">Conditionals</h3>
+<h3 id="conditionals:8cfcc91753003e1034d5997d04a3529e">Conditionals</h3>
 
 <p>If, else, with, or, &amp; and provide the framework for handling conditional
 logic in Go Templates. Like range, each statement is closed with <code>end</code>.</p>
@@ -492,7 +485,7 @@ and skips the block if the variable is absent.</p>
 {{ end }}
 </code></pre>
 
-<h2 id="pipes:08cfabf6312c9fe10477f4bc9e27bdd5">Pipes</h2>
+<h2 id="pipes:8cfcc91753003e1034d5997d04a3529e">Pipes</h2>
 
 <p>One of the most powerful components of go templates is the ability to
 stack actions one after another. This is done by using pipes. Borrowed
@@ -540,7 +533,7 @@ Stuff Here
 {{ end }}
 </code></pre>
 
-<h2 id="context-aka-the-dot:08cfabf6312c9fe10477f4bc9e27bdd5">Context (aka. the dot)</h2>
+<h2 id="context-aka-the-dot:8cfcc91753003e1034d5997d04a3529e">Context (aka. the dot)</h2>
 
 <p>The most easily overlooked concept to understand about go templates is that {{ . }}
 always refers to the current context. In the top level of your template this
@@ -562,7 +555,7 @@ instead of depending on the context.</p>
 have defined a variable outside of the loop so we have access to it from within
 the loop.</p>
 
-<h1 id="hugo-parameters:08cfabf6312c9fe10477f4bc9e27bdd5">Hugo Parameters</h1>
+<h1 id="hugo-parameters:8cfcc91753003e1034d5997d04a3529e">Hugo Parameters</h1>
 
 <p>Hugo provides the option of passing values to the template language
 through the site configuration (for sitewide values), or through the meta
@@ -570,7 +563,7 @@ data of each specific piece of content. You can define any values of any
 type (supported by your front matter/config format) and use them however
 you want to inside of your templates.</p>
 
-<h2 id="using-content-page-parameters:08cfabf6312c9fe10477f4bc9e27bdd5">Using Content (page) Parameters</h2>
+<h2 id="using-content-page-parameters:8cfcc91753003e1034d5997d04a3529e">Using Content (page) Parameters</h2>
 
 <p>In each piece of content you can provide variables to be used by the
 templates. This happens in the <a href="/content/front-matter">front matter</a>.</p>
@@ -602,7 +595,7 @@ notoc: true
   {{ end }}
 </code></pre>
 
-<h2 id="using-site-config-parameters:08cfabf6312c9fe10477f4bc9e27bdd5">Using Site (config) Parameters</h2>
+<h2 id="using-site-config-parameters:8cfcc91753003e1034d5997d04a3529e">Using Site (config) Parameters</h2>
 
 <p>In your top-level configuration file (eg, <code>config.yaml</code>) you can define site
 parameters, which are values which will be available to you in chrome.</p>
@@ -650,12 +643,12 @@ so, such as in this example:</p>
 
             </div>
             <footer class="article-footer">
-    <a data-url="https://parvezrafi.github.io/2015/09/17/go-is-for-lovers" data-id="08cfabf6312c9fe10477f4bc9e27bdd5" class="article-share-link">
+    <a data-url="https://parvezrafi.github.io/2016/12/10/using-tensorflow" data-id="8cfcc91753003e1034d5997d04a3529e" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
     
-    <a href="https://parvezrafi.github.io/2015/09/17/go-is-for-lovers/#disqus_thread" class="article-comment-link">
+    <a href="https://parvezrafi.github.io/2016/12/10/using-tensorflow/#disqus_thread" class="article-comment-link">
         Comments
     </a>
     
@@ -731,14 +724,14 @@ so, such as in this example:</p>
         
 <nav id="article-nav">
     
-
-    
-    <a href="https://parvezrafi.github.io/2016/12/10/using-tensorflow" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="https://parvezrafi.github.io/2015/09/17/go-is-for-lovers" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">
-          Newer
+          Older
       </strong>
-      <div class="article-nav-title">Using TensorFlow</div>
+      <div class="article-nav-title">Go is for lovers</div>
     </a>
+    
+
     
 </nav>
 
@@ -751,9 +744,9 @@ so, such as in this example:</p>
             <div id="disqus_thread"></div>
 <script type="text/javascript">
     var disqus_shortname = 'rafiparvez';
-    var disqus_identifier = 'https:\/\/parvezrafi.github.io\/2015\/09\/17\/go-is-for-lovers';
-    var disqus_title = 'Go is for lovers';
-    var disqus_url = 'https:\/\/parvezrafi.github.io\/2015\/09\/17\/go-is-for-lovers';
+    var disqus_identifier = 'https:\/\/parvezrafi.github.io\/2016\/12\/10\/using-tensorflow';
+    var disqus_title = 'Using TensorFlow';
+    var disqus_url = 'https:\/\/parvezrafi.github.io\/2016\/12\/10\/using-tensorflow';
 
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
@@ -783,7 +776,7 @@ so, such as in this example:</p>
                 <div class="item-thumbnail">
                     <a href="https://parvezrafi.github.io/2016/12/10/using-tensorflow" class="thumbnail">
                     
-                        <span style="background-image:url(https://parvezrafi.github.io/banners/tf.jpg)" alt="Go is for lovers" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://parvezrafi.github.io/banners/tf.jpg)" alt="Using TensorFlow" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -809,7 +802,7 @@ so, such as in this example:</p>
                 <div class="item-thumbnail">
                     <a href="https://parvezrafi.github.io/2015/09/17/go-is-for-lovers" class="thumbnail">
                     
-                        <span style="background-image:url(https://parvezrafi.github.io/banners/placeholder.png)" alt="Go is for lovers" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://parvezrafi.github.io/banners/placeholder.png)" alt="Using TensorFlow" class="thumbnail-image"></span>
                     
                     </a>
                 </div>

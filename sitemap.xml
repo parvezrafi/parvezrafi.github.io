@@ -3,38 +3,18 @@
   
   <url>
     <loc>https://parvezrafi.github.io/</loc>
-    <lastmod>2015-10-10T16:56:43+02:00</lastmod>
+    <lastmod>2016-12-10T01:33:08+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://parvezrafi.github.io/2015/10/10/introducing-icarus-and-its-features</loc>
-    <lastmod>2015-10-10T16:56:43+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://parvezrafi.github.io/2015/10/10/migrate-from-jekyll</loc>
-    <lastmod>2015-10-10T13:07:31+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://parvezrafi.github.io/2015/10/02/linked-post</loc>
-    <lastmod>2015-10-02T21:49:20+02:00</lastmod>
+    <loc>https://parvezrafi.github.io/2016/12/10/using-tensorflow</loc>
+    <lastmod>2016-12-10T01:33:08+02:00</lastmod>
   </url>
   
   <url>
     <loc>https://parvezrafi.github.io/2015/09/17/go-is-for-lovers</loc>
     <lastmod>2015-09-17T13:47:08+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://parvezrafi.github.io/2015/08/03/hugo-is-for-lovers</loc>
-    <lastmod>2015-08-03T13:39:46+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://parvezrafi.github.io/2015/06/24/creating-a-new-theme</loc>
-    <lastmod>2015-06-24T13:50:46+02:00</lastmod>
   </url>
   
 </urlset>
