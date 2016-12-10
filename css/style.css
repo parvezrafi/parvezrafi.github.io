@@ -362,6 +362,10 @@ code {
 #main-nav {
   float: left;
 }
+.header-inner #main-nav {
+  width: 50%;
+  text-transform: uppercase;
+}
 #sub-nav,
 #search-form-wrap {
   float: right;
@@ -372,6 +376,7 @@ code {
 }
 .header-inner #logo {
   display: inline-block;
+  width: 21.53846153846154%;
 }
 .header-inner #logo .logo {
   margin-right: 5px;
@@ -382,6 +387,7 @@ code {
   display: inline-block;
   vertical-align: top;
   font-weight: 600;
+  color: #62d0c7
 }
 #header-title {
   text-align: center;
@@ -465,6 +471,12 @@ code {
 }
 .main-nav-link {
   font-weight: 300;
+  border-right:1px solid #dce1e2;
+  font-size: medium
+}
+
+.main-nav-link:last-child {
+    border-right: none;
 }
 @media screen and (min-width: 1200px) {
   #sub-nav {
@@ -580,6 +592,7 @@ code {
 #main-nav-mobile {
   overflow-y: hidden;
   overflow-x: auto;
+  text-transform: uppercase;
 }
 #main-nav-mobile .menu {
   margin: 0;

@@ -10,15 +10,12 @@
     <atom:link href="https://parvezrafi.github.io/tags/programming/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Linked post</title>
-      <link>https://parvezrafi.github.io/2015/10/02/linked-post</link>
+      <title>Word Counter</title>
+      <link>https://parvezrafi.github.io/projects/Projects/</link>
       <pubDate>Fri, 02 Oct 2015 21:49:20 +0200</pubDate>
       
-      <guid>https://parvezrafi.github.io/2015/10/02/linked-post</guid>
+      <guid>https://parvezrafi.github.io/projects/Projects/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m a linked post in the menu. You can add other posts by adding the following line to the frontmatter:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;menu = &amp;quot;main&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mauris nulla, vestibulum vel auctor sed, posuere eu lorem. Aliquam consequat augue ut accumsan mollis. Suspendisse malesuada sodales tincidunt. Vivamus sed erat ac augue bibendum porta sed id ipsum. Ut mollis mauris eget ligula sagittis cursus. Aliquam id pharetra tellus. Pellentesque sed tempus risus. Proin id hendrerit ante. Vestibulum vitae urna ut mauris ultricies dignissim. Ut ante turpis, tristique vitae sagittis quis, sagittis nec diam. Fusce pulvinar cursus porta. Vivamus maximus leo dolor, ut pellentesque lorem fringilla nec. Mauris faucibus turpis posuere sapien euismod, a ullamcorper mi maximus.&lt;/p&gt;
 
