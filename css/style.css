@@ -356,7 +356,7 @@ code {
   -moz-transition: 0.2s ease;
   -ms-transition: 0.2s ease;
   transition: 0.2s ease;
-  color: #565a5f;
+  color: #ffffff;
 }
 #header a:hover {
   color: #38b7ea;
@@ -376,6 +376,9 @@ code {
 .header-inner #main-nav {
   width: 50%;
   text-transform: uppercase;
+  background-color: #6495ed;
+  /*background: linear-gradient(#286eec, #6495ed, #286eec);*/
+  text-shadow: 0 0px 1px;
 }
 #sub-nav,
 #search-form-wrap {
@@ -398,7 +401,7 @@ code {
   display: inline-block;
   vertical-align: top;
   font-weight: 600;
-  color: #62d0c7
+  color: #094492;
 }
 #header-title {
   text-align: center;
@@ -604,6 +607,8 @@ code {
   overflow-y: hidden;
   overflow-x: auto;
   text-transform: uppercase;
+  background-color: #6495ed;
+  text-shadow: 0 0px 1px;
 }
 #main-nav-mobile .menu {
   margin: 0;
