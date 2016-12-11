@@ -204,19 +204,30 @@ code {
 .archive-article-header a:visited,
 .layout-wrap-inner.tag-cloud a:visited,
 .timeline-row .content h1 a:visited {
-  color: #565a5f;
+  /* color: #565a5f; */
   -webkit-transition: 0.2s ease;
   -moz-transition: 0.2s ease;
   -ms-transition: 0.2s ease;
   transition: 0.2s ease;
 }
+
 .archive-article-header a:hover,
 .layout-wrap-inner.tag-cloud a:hover,
 .timeline-row .content h1 a:hover,
 .archive-article-header a:visited:hover,
 .layout-wrap-inner.tag-cloud a:visited:hover,
 .timeline-row .content h1 a:visited:hover {
-  color: #38b7ea;
+  color: #565a5f;
+}
+
+.archive-article-title a:hover {
+  color: #565a5f;
+}
+.archive-article-inner {
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #f5f8f9;
 }
 .article-meta,
 .archive-year,
@@ -1398,8 +1409,7 @@ ol.toc {
   page-break-inside: avoid;
   overflow: hidden;
   break-inside: avoid-column;
-  padding: 0;
-  margin-bottom: 15px;
+  padding-bottom: 10px;
 }
 .archive-article:before,
 .archive-article:after {
@@ -1474,9 +1484,22 @@ ol.toc {
     font-size: 1.3em;
   }
 }
-.archive-article-date {
+.archive-summary {
   display: block;
   margin-top: 8px;
+  margin-bottom: 4px;
+}
+
+.archive-category {
+  padding-top: 15px;
+  padding-left: 10px;
+  font-size: 1.5em
+}
+.archives-wrap {
+  display: block;
+  background: white;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .layout-wrap-inner.list-categories ul {
   margin-left: 15px;
