@@ -1,53 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Projects on The Learning Curve</title>
+    <title>Projects on My Learning Curve</title>
     <link>https://parvezrafi.github.io/project/</link>
-    <description>Recent content in Projects on The Learning Curve</description>
+    <description>Recent content in Projects on My Learning Curve</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 02 Oct 2015 21:49:20 +0200</lastBuildDate>
     <atom:link href="https://parvezrafi.github.io/project/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Digit Recognizer</title>
-      <link>https://parvezrafi.github.io/project/Digit-Recognizer/</link>
-      <pubDate>Fri, 02 Oct 2015 21:49:20 +0200</pubDate>
-      
-      <guid>https://parvezrafi.github.io/project/Digit-Recognizer/</guid>
-      <description>
-
-&lt;p&gt;A machine learning based solution which helps recognize hand-written digits&lt;/p&gt;
-
-&lt;h3 id=&#34;technology-stack:b8e92ffc2bfc1a4efb876f0cac205d44&#34;&gt;TECHNOLOGY STACK&lt;/h3&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;Algorithm&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;Random Forest Classifier&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;Language&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;MATLAB&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;Source&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://github.com/rafiparvez/Hand-Written-Digit-Recognizer/&#34;&gt;Digit Recognizer&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-</description>
-    </item>
     
     <item>
       <title>My Microblogger</title>
@@ -93,6 +53,46 @@
 &lt;tr&gt;
 &lt;td&gt;&lt;strong&gt;Source Code&lt;/strong&gt;&lt;/td&gt;
 &lt;td&gt;&lt;a href=&#34;https://github.com/rafiparvez/Flask-Apps/tree/master/Microblogger-v2&#34;&gt;My Microblogger&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Recognize the numbers</title>
+      <link>https://parvezrafi.github.io/project/Digit-Recognizer/</link>
+      <pubDate>Fri, 02 Oct 2015 21:49:20 +0200</pubDate>
+      
+      <guid>https://parvezrafi.github.io/project/Digit-Recognizer/</guid>
+      <description>
+
+&lt;p&gt;A machine learning based solution which helps recognize hand-written digits.&lt;/p&gt;
+
+&lt;h3 id=&#34;technology-stack:b8e92ffc2bfc1a4efb876f0cac205d44&#34;&gt;TECHNOLOGY STACK&lt;/h3&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Algorithm&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;Random Forest Classifier&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Language&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;MATLAB&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Source Code&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://github.com/rafiparvez/Hand-Written-Digit-Recognizer/&#34;&gt;Digit Recognizer&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;

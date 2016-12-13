@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
-    <title>Using TensorFlow &middot; My Learning Curve</title>
+    <title>Linear Regression In TensorFlow &middot; My Learning Curve</title>
     <meta name="generator" content="Hugo 0.16-DEV" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -10,7 +10,7 @@
       <meta name="description" content="">
     
     
-    <link rel="canonical" href="https://parvezrafi.github.io/2016/12/10/using-tensorflow"/>
+    <link rel="canonical" href="https://parvezrafi.github.io/2016/12/11/linear-regression-in-tensorflow"/>
     <link rel="icon" href="https://parvezrafi.github.io/favicon.ico">
     <link rel="apple-touch-icon" href="https://parvezrafi.github.io/apple-touch-icon.png"/>
     <link rel="stylesheet" href="https://parvezrafi.github.io/css/style.css">
@@ -20,13 +20,13 @@
     
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
-    <meta property="og:title" content="Using TensorFlow" />
-<meta property="og:description" content="This document is a brief primer on using go templates. The go docs provide more details. Introduction to Tensor Flow Go templates provide an extremely simple template language. It adheres to the belief that only the most basic of logic belongs in the template or view layer. One consequence of this simplicity is that go templates parse very quickly. A unique characteristic of go templates is they are content aware. Variables and content will be sanitized depending on the context of where they are used." />
+    <meta property="og:title" content="Linear Regression In TensorFlow" />
+<meta property="og:description" content="This article explains how to implement linear regression in using Tensorflow. Before we dive into implementing Linear Regression using Tensorflow, which is a machine learning library developed at Google, let me give you a brief primer on linear regression in machine learning. Linear model: $Y = aX&#43;b$ $X$ = independent variable $Y$ = dependent variable a = slope or gradient b = intercept Univariate Linear Regression = single dependent variable Mulivariate Linear Regression = Multiple dependent variables go docs." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://parvezrafi.github.io/2016/12/10/using-tensorflow" />
+<meta property="og:url" content="https://parvezrafi.github.io/2016/12/11/linear-regression-in-tensorflow" />
 
 
-<meta property="og:updated_time" content="2016-12-10T01:33:08&#43;02:00"/>
+<meta property="og:updated_time" content="2016-12-11T22:50:08&#43;02:00"/>
 
 
 
@@ -39,12 +39,12 @@
 
     
     
-<meta itemprop="name" content="Using TensorFlow">
-<meta itemprop="description" content="This document is a brief primer on using go templates. The go docs provide more details. Introduction to Tensor Flow Go templates provide an extremely simple template language. It adheres to the belief that only the most basic of logic belongs in the template or view layer. One consequence of this simplicity is that go templates parse very quickly. A unique characteristic of go templates is they are content aware. Variables and content will be sanitized depending on the context of where they are used.">
+<meta itemprop="name" content="Linear Regression In TensorFlow">
+<meta itemprop="description" content="This article explains how to implement linear regression in using Tensorflow. Before we dive into implementing Linear Regression using Tensorflow, which is a machine learning library developed at Google, let me give you a brief primer on linear regression in machine learning. Linear model: $Y = aX&#43;b$ $X$ = independent variable $Y$ = dependent variable a = slope or gradient b = intercept Univariate Linear Regression = single dependent variable Mulivariate Linear Regression = Multiple dependent variables go docs.">
 
 
-<meta itemprop="dateModified" content="2016-12-10T01:33:08&#43;02:00" />
-<meta itemprop="wordCount" content="1422">
+<meta itemprop="dateModified" content="2016-12-11T22:50:08&#43;02:00" />
+<meta itemprop="wordCount" content="1407">
 
 
 
@@ -56,8 +56,8 @@
 
 
 
-<meta name="twitter:title" content="Using TensorFlow"/>
-<meta name="twitter:description" content="This document is a brief primer on using go templates. The go docs provide more details. Introduction to Tensor Flow Go templates provide an extremely simple template language. It adheres to the belief that only the most basic of logic belongs in the template or view layer. One consequence of this simplicity is that go templates parse very quickly. A unique characteristic of go templates is they are content aware. Variables and content will be sanitized depending on the context of where they are used."/>
+<meta name="twitter:title" content="Linear Regression In TensorFlow"/>
+<meta name="twitter:description" content="This article explains how to implement linear regression in using Tensorflow. Before we dive into implementing Linear Regression using Tensorflow, which is a machine learning library developed at Google, let me give you a brief primer on linear regression in machine learning. Linear model: $Y = aX&#43;b$ $X$ = independent variable $Y$ = dependent variable a = slope or gradient b = intercept Univariate Linear Regression = single dependent variable Mulivariate Linear Regression = Multiple dependent variables go docs."/>
 <meta name="twitter:site" content="@parvez_rafi"/>
 
 
@@ -258,18 +258,18 @@
             
 
             <header class="article-header">
-    <a href="https://parvezrafi.github.io/2016/12/10/using-tensorflow">
+    <a href="https://parvezrafi.github.io/2016/12/11/linear-regression-in-tensorflow">
     <h1 class="article-title" itemprop="name">
-        Using TensorFlow
+        Linear Regression In TensorFlow
     </h1>
     </a>
     <div class="article-meta">
         
         <div class="article-date">
             <i class="fa fa-calendar"></i>
-            <time datetime="2016-12-10 01:33:08 &#43;0200 &#43;0200" itemprop="datePublished">10/12/2016</time>
+            <time datetime="2016-12-11 22:50:08 &#43;0200 &#43;0200" itemprop="datePublished">11/12/2016</time>
             &middot;
-            1422
+            1407
             words
 
         </div>
@@ -296,7 +296,7 @@
                 <i class="fa fa-tags"></i>
                 
                 
-                <a class="article-category-link" href="tags/deep-learning">deep learning</a>
+                <a class="article-category-link" href="tags/tensorflow">Tensorflow</a>
                 
                 
             </div>
@@ -308,20 +308,22 @@
             <div class="article-entry" itemprop="articleBody">
                 
 
-<p>This document is a brief primer on using go templates. The <a href="http://golang.org/pkg/html/template/&gt;">go docs</a>
-provide more details.</p>
+<p>This article explains how to implement linear regression in using Tensorflow.</p>
 
-<h2 id="introduction-to-tensor-flow:8cfcc91753003e1034d5997d04a3529e">Introduction to Tensor Flow</h2>
+<p>Before we dive into implementing Linear Regression using Tensorflow, which is a machine learning library developed at Google, let me give you a brief primer on linear regression in machine learning.</p>
 
-<p>Go templates provide an extremely simple template language. It adheres to the
-belief that only the most basic of logic belongs in the template or view layer.
-One consequence of this simplicity is that go templates parse very quickly.</p>
+<p>Linear model:
+$Y = aX+b$
+$X$ = independent variable
+$Y$ = dependent variable
+a = slope or gradient
+b = intercept
+Univariate Linear Regression = single dependent variable
+Mulivariate Linear Regression = Multiple dependent variables</p>
 
-<p>A unique characteristic of go templates is they are content aware. Variables and
-content will be sanitized depending on the context of where they are used. More
-details can be found in the <a href="http://golang.org/pkg/html/template/&gt;">go docs</a>.</p>
+<p><a href="http://golang.org/pkg/html/template/&gt;">go docs</a>.</p>
 
-<h2 id="basic-syntax:8cfcc91753003e1034d5997d04a3529e">Basic Syntax</h2>
+<h2 id="basic-syntax:151d92fb75a508007a285feb55442c14">Basic Syntax</h2>
 
 <p>Go lang templates are html files with the addition of variables and
 functions.</p>
@@ -352,7 +354,7 @@ functions.</p>
 <pre><code>{{ if or (isset .Params &quot;alt&quot;) (isset .Params &quot;caption&quot;) }} Caption {{ end }}
 </code></pre>
 
-<h2 id="variables:8cfcc91753003e1034d5997d04a3529e">Variables</h2>
+<h2 id="variables:151d92fb75a508007a285feb55442c14">Variables</h2>
 
 <p>Each go template has a struct (object) made available to it. In hugo each
 template is passed either a page or a node struct depending on which type of
@@ -370,7 +372,7 @@ page you are rendering. More details are available on the
 {{ $address }}
 </code></pre>
 
-<h2 id="functions:8cfcc91753003e1034d5997d04a3529e">Functions</h2>
+<h2 id="functions:151d92fb75a508007a285feb55442c14">Functions</h2>
 
 <p>Go template ship with a few functions which provide basic functionality. The go
 template system also provides a mechanism for applications to extend the
@@ -385,7 +387,7 @@ functions cannot be added without recompiling hugo.</p>
 <pre><code>{{ add 1 2 }}
 </code></pre>
 
-<h2 id="includes:8cfcc91753003e1034d5997d04a3529e">Includes</h2>
+<h2 id="includes:151d92fb75a508007a285feb55442c14">Includes</h2>
 
 <p>When including another template you will pass to it the data it will be
 able to access. To pass along the current context please remember to
@@ -397,11 +399,11 @@ the /layout/ directory within Hugo.</p>
 <pre><code>{{ template &quot;chrome/header.html&quot; . }}
 </code></pre>
 
-<h2 id="logic:8cfcc91753003e1034d5997d04a3529e">Logic</h2>
+<h2 id="logic:151d92fb75a508007a285feb55442c14">Logic</h2>
 
 <p>Go templates provide the most basic iteration and conditional logic.</p>
 
-<h3 id="iteration:8cfcc91753003e1034d5997d04a3529e">Iteration</h3>
+<h3 id="iteration:151d92fb75a508007a285feb55442c14">Iteration</h3>
 
 <p>Just like in go, the go templates make heavy use of range to iterate over
 a map, array or slice. The following are different examples of how to use
@@ -429,7 +431,7 @@ range.</p>
 {{ end }}
 </code></pre>
 
-<h3 id="conditionals:8cfcc91753003e1034d5997d04a3529e">Conditionals</h3>
+<h3 id="conditionals:151d92fb75a508007a285feb55442c14">Conditionals</h3>
 
 <p>If, else, with, or, &amp; and provide the framework for handling conditional
 logic in Go Templates. Like range, each statement is closed with <code>end</code>.</p>
@@ -481,7 +483,7 @@ and skips the block if the variable is absent.</p>
 {{ end }}
 </code></pre>
 
-<h2 id="pipes:8cfcc91753003e1034d5997d04a3529e">Pipes</h2>
+<h2 id="pipes:151d92fb75a508007a285feb55442c14">Pipes</h2>
 
 <p>One of the most powerful components of go templates is the ability to
 stack actions one after another. This is done by using pipes. Borrowed
@@ -529,7 +531,7 @@ Stuff Here
 {{ end }}
 </code></pre>
 
-<h2 id="context-aka-the-dot:8cfcc91753003e1034d5997d04a3529e">Context (aka. the dot)</h2>
+<h2 id="context-aka-the-dot:151d92fb75a508007a285feb55442c14">Context (aka. the dot)</h2>
 
 <p>The most easily overlooked concept to understand about go templates is that {{ . }}
 always refers to the current context. In the top level of your template this
@@ -551,7 +553,7 @@ instead of depending on the context.</p>
 have defined a variable outside of the loop so we have access to it from within
 the loop.</p>
 
-<h1 id="hugo-parameters:8cfcc91753003e1034d5997d04a3529e">Hugo Parameters</h1>
+<h1 id="hugo-parameters:151d92fb75a508007a285feb55442c14">Hugo Parameters</h1>
 
 <p>Hugo provides the option of passing values to the template language
 through the site configuration (for sitewide values), or through the meta
@@ -559,7 +561,7 @@ data of each specific piece of content. You can define any values of any
 type (supported by your front matter/config format) and use them however
 you want to inside of your templates.</p>
 
-<h2 id="using-content-page-parameters:8cfcc91753003e1034d5997d04a3529e">Using Content (page) Parameters</h2>
+<h2 id="using-content-page-parameters:151d92fb75a508007a285feb55442c14">Using Content (page) Parameters</h2>
 
 <p>In each piece of content you can provide variables to be used by the
 templates. This happens in the <a href="/content/front-matter">front matter</a>.</p>
@@ -591,7 +593,7 @@ notoc: true
   {{ end }}
 </code></pre>
 
-<h2 id="using-site-config-parameters:8cfcc91753003e1034d5997d04a3529e">Using Site (config) Parameters</h2>
+<h2 id="using-site-config-parameters:151d92fb75a508007a285feb55442c14">Using Site (config) Parameters</h2>
 
 <p>In your top-level configuration file (eg, <code>config.yaml</code>) you can define site
 parameters, which are values which will be available to you in chrome.</p>
@@ -640,7 +642,7 @@ so, such as in this example:</p>
             </div>
             <footer class="article-footer">
     
-    <a data-url="https://parvezrafi.github.io/2016/12/10/using-tensorflow" data-id="8cfcc91753003e1034d5997d04a3529e" class="article-share-link">
+    <a data-url="https://parvezrafi.github.io/2016/12/11/linear-regression-in-tensorflow" data-id="151d92fb75a508007a285feb55442c14" class="article-share-link">
         <i class="fa fa-share"></i>
         Share
     </a>
@@ -719,14 +721,14 @@ so, such as in this example:</p>
 
 <nav id="article-nav">
     
-
-    
-    <a href="https://parvezrafi.github.io/2016/12/11/linear-regression-in-tensorflow" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="https://parvezrafi.github.io/2016/12/10/using-tensorflow" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">
-          Next Article
+          Previous Article
       </strong>
-      <div class="article-nav-title">Linear Regression In TensorFlow</div>
+      <div class="article-nav-title">Using TensorFlow</div>
     </a>
+    
+
     
 </nav>
 
@@ -752,7 +754,7 @@ so, such as in this example:</p>
                 <div class="item-thumbnail">
                     <a href="https://parvezrafi.github.io/2016/12/11/linear-regression-in-tensorflow" class="thumbnail">
                     
-                        <span style="background-image:url(https://parvezrafi.github.io/banners/tf.jpg)" alt="Using TensorFlow" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://parvezrafi.github.io/banners/tf.jpg)" alt="Linear Regression In TensorFlow" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
@@ -778,7 +780,7 @@ so, such as in this example:</p>
                 <div class="item-thumbnail">
                     <a href="https://parvezrafi.github.io/2016/12/10/using-tensorflow" class="thumbnail">
                     
-                        <span style="background-image:url(https://parvezrafi.github.io/banners/tf.jpg)" alt="Using TensorFlow" class="thumbnail-image"></span>
+                        <span style="background-image:url(https://parvezrafi.github.io/banners/tf.jpg)" alt="Linear Regression In TensorFlow" class="thumbnail-image"></span>
                     
                     </a>
                 </div>
